@@ -1,0 +1,21 @@
+@model RockEntity
+
+<div class="d-flex flex-row h-100 w-100 gap-2 ">
+    <div class="d-flex h-100 w-10 flex-column rounded img-thumbnail">
+        <img src="~/rocks/@{@Model.Name}.jpeg" class="p-2 w-100 rounded" alt="@{@Model.Name}">
+        <div>
+            calendar
+        </div>
+    </div>
+    <div class="container w-100 d-flex flex-column px-4 img-thumbnail">
+        <h2 class="fs-1 border-bottom pb-2 text-info">Details</h2>
+        <ul class="fs-3 d-flex flex-column gap-3">
+            <li>Id - @Model.Id</li>
+            <li>Name - @Model.Name</li>
+            <li>Formula - @Model.Formula</li>
+            <li>Hardness - @Model.Hardness</li>
+            <li>Density - @Model.Density</li>
+            <li>Month - @Model.Month</li>
+        </ul>
+    </div>
+</div>

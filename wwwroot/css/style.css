@@ -1,0 +1,15 @@
+.hover-text {
+    display:flex;
+    height: 100%;
+    cursor: pointer;    
+}
+
+.hover-place {
+    bottom: -80%;
+    height: 100%;
+    transition: bottom 1s;
+}
+
+.hover-element:hover .hover-place {
+    bottom: 0;
+}
