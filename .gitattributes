@@ -1,0 +1,5 @@
+*.cs linguist-language=C#
+*.csproj linguist-language=XML
+*.sln linguist-language=Text
+*.razor linguist-language=C#
+*.cshtml linguist-language=HTML

@@ -30,3 +30,7 @@ Made basic layout for Rock0/index.cshtml using bootstrap
     16.12.24
 
 Made basic layout for Rock0/details.cshtml and added migrations
+
+    19.12.24
+
+Tried to change from bootstrap to tailwind, but decided to stay. Added ImageFileName and loading image by it, and not by rock name. Added loading default image, if img file doesn't exist
