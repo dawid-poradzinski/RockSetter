@@ -9,7 +9,7 @@ public class RockEntity
     public string Name {get;set;}
 
     [Required]
-    public float  Density {get;set;}
+    public double Density {get;set;}
     [Required]
     public int Hardness {get;set;}
 
@@ -20,4 +20,6 @@ public class RockEntity
     public int Month {get;set;}
 
     public bool Favorible {get;set;}
+
+    public string ImageFileName {get;set;}
 }

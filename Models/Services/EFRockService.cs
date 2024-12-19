@@ -1,6 +1,8 @@
 
 
 
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 public class EFRockSerivce : IRockService
 {
 
@@ -29,7 +31,7 @@ public class EFRockSerivce : IRockService
 
     public RockEntity? GetById(int id)
     {
-        return _context.Rocks.Find(id);
+       return _context.Rocks.Find(id);
     }
 
     public RockEntity? GetByName(string name)
@@ -39,6 +41,7 @@ public class EFRockSerivce : IRockService
 
     public void Update(RockEntity rock)
     {
-        throw new NotImplementedException();
+        _context.Rocks.Update(rock);
+        _context.SaveChanges();
     }
 }

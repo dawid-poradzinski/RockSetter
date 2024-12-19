@@ -158,3 +158,4 @@ A:\programowanie\Studia\netnauka\RockSetter\bin\Debug\net8.0\ru\Microsoft.CodeAn
 A:\programowanie\Studia\netnauka\RockSetter\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 A:\programowanie\Studia\netnauka\RockSetter\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 A:\programowanie\Studia\netnauka\RockSetter\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+A:\programowanie\Studia\netnauka\RockSetter\obj\Debug\net8.0\RockSetter.sourcelink.json

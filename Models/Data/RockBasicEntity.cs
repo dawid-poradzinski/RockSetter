@@ -5,5 +5,5 @@ public class RockBasicEntity
 
     public bool Favorible;
 
-    // image
+    public string ImageFileName;
 }

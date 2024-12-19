@@ -253,6 +253,10 @@
       "PackagePath": "staticwebassets\\rocks\\amethysd.jpeg"
     },
     {
+      "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default.jpeg",
+      "PackagePath": "staticwebassets\\rocks\\default.jpeg"
+    },
+    {
       "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\emerald.jpeg",
       "PackagePath": "staticwebassets\\rocks\\emerald.jpeg"
     },

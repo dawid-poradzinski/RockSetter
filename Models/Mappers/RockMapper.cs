@@ -6,7 +6,8 @@ public class RockMapper
         {
             Id = rock.Id,
             Name = rock.Name,
-            Favorible = rock.Favorible
+            Favorible = rock.Favorible,
+            ImageFileName = rock.ImageFileName
         };
     }
 }

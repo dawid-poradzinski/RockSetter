@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WyjBgnYbA+WfhrVyVJvKjxS9JoYH3MIscfOmkjv2lYc=",
+  "Hash": "da6Bon1MaNi6zc6p4cfrYn2LT+CUPhw6XaPsbKnlZGE=",
   "Source": "RockSetter",
   "BasePath": "_content/RockSetter",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\rocks\\amethysd.jpeg"
+    },
+    {
+      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default.jpeg",
+      "SourceId": "RockSetter",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\",
+      "BasePath": "_content/RockSetter",
+      "RelativePath": "rocks/default.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rocks\\default.jpeg"
     },
     {
       "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\emerald.jpeg",

@@ -7,7 +7,7 @@
 
     @if (Model.Count < 1)
     {
-        <div class="bg-danger p-3 mb-2">
+        <div class="bg-dark text-white p-3 mb-2">
             You don't have any rocks sadly
         </div>
 
@@ -18,15 +18,15 @@
 
         <div class="accordion">
             <div class="d-flex flex-column-reverse gap-2">
-                <div class="accordion-item">
+                <div class="accordion-item bg-dark border-secondary">
 
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed shadow-sm bg-info rounded" type="button"
+                        <button class="accordion-button collapsed shadow-sm bg-primary text-white" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                             All Rocks
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse show">
+                    <div id="collapseTwo" class="accordion-collapse collapse">
                         <div class="accordion-body">
 
 
@@ -34,7 +34,7 @@
                                 <div class="row row-cols-5">
 
                                     <div class="col p-3" id="addNew">
-                                        <a class="btn shadow btn-info w-100 h-100 d-flex justify-content-center align-items-center"
+                                        <a class="btn shadow btn-primary w-100 h-100 d-flex justify-content-center align-items-center"
                                             asp-controller="Rock0" asp-action="Add">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
                                                 fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
@@ -54,7 +54,7 @@
                                         <div class="p-3 col">
                                             <div class="rounded overflow-hidden position-relative hover-element shadow">
                                                 <a asp-controller="Rock0" asp-action="Details" asp-route-id=@rock.Id>
-                                                    <img class="w-100 rounded" src="~/rocks/@{@rock.Name}.jpeg" alt="rock">
+                                                    <img class="w-100 rounded" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
                                                     <div class="rounded  position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
                                                         style="--bs-bg-opacity:0.5;">
                                                         <div>
@@ -62,7 +62,7 @@
                                                         </div>
                                                         <div class="justify-content-center align-items-center hover-text">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                                                fill="currentColor" class="bi bi-info-circle"
+                                                                fill="currentColor" class="bi bi-primary-circle"
                                                                 viewBox="0 0 16 16">
                                                                 <path
                                                                     d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
@@ -85,9 +85,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item ">
-                    <h2 class="accordion-header shadow-sm rounded">
-                        <button class="accordion-button bg-info rounded" type="button" data-bs-toggle="collapse"
+                <div class="accordion-item bg-dark border-secondary ">
+                    <h2 class="accordion-header shadow-sm">
+                        <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne">
                             Your favorible &hearts;
                         </button>
@@ -111,8 +111,8 @@
 
                                             <div class="p-3 col">
                                                 <div class="rounded overflow-hidden position-relative hover-element shadow">
-                                                    <a asp-controller="Rock0" asp-action="Details" asp-route-id=@rock.Id>
-                                                        <img class="w-100 rounded" src="~/rocks/@{@rock.Name}.jpeg" alt="rock">
+                                                    <a asp-controller="Rock0" asp-action="Details" asp-route-id=@rock.Id>         
+                                                       <img class="w-100 rounded" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
                                                         <div class="rounded  position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
                                                             style="--bs-bg-opacity:0.5;">
                                                             <div>

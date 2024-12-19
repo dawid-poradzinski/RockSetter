@@ -27,7 +27,8 @@ public class AppDbContext : DbContext
             Favorible = false,
             Formula = "Si_02H20",
             Hardness = 4,
-            Month = 4
+            Month = 4,
+            ImageFileName = "amethyst"
           },
             new RockEntity()
           {
@@ -37,7 +38,8 @@ public class AppDbContext : DbContext
             Favorible = true,
             Formula = "Si_02H20",
             Hardness = 4,
-            Month = 4
+            Month = 4,
+            ImageFileName = "emerald"
           }
         );
     }
