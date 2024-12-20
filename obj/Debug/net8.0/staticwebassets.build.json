@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "da6Bon1MaNi6zc6p4cfrYn2LT+CUPhw6XaPsbKnlZGE=",
+  "Hash": "kVdlxcYhtI9ArvpxURbe6UQzDJQY5I7HllPyfDDELio=",
   "Source": "RockSetter",
   "BasePath": "_content/RockSetter",
   "Mode": "Default",
@@ -1214,12 +1214,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\amethysd.jpeg",
+      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\amethyst.jpeg",
       "SourceId": "RockSetter",
       "SourceType": "Discovered",
       "ContentRoot": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\",
       "BasePath": "_content/RockSetter",
-      "RelativePath": "rocks/amethysd.jpeg",
+      "RelativePath": "rocks/amethyst.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1230,7 +1230,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\rocks\\amethysd.jpeg"
+      "OriginalItemSpec": "wwwroot\\rocks\\amethyst.jpeg"
     },
     {
       "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default.jpeg",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\rocks\\default.jpeg"
+    },
+    {
+      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default2.jpeg",
+      "SourceId": "RockSetter",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\",
+      "BasePath": "_content/RockSetter",
+      "RelativePath": "rocks/default2.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rocks\\default2.jpeg"
     },
     {
       "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\emerald.jpeg",

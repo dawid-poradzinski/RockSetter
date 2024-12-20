@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 public class Rock0Controller : Controller
 {
@@ -43,6 +44,16 @@ public class Rock0Controller : Controller
     [HttpPost]
     public IActionResult Add(RockEntity rock)
     {
+        ModelState.Clear();
+        rock.ImageFileName = "default";
+        TryValidateModel(rock);
+        
+        if(ModelState.IsValid)
+        {
+
+            _rockService.Add(rock);
+            return RedirectToAction(nameof(Details), new {rock.Id});
+        }
         return View();
     }
 
@@ -55,11 +66,20 @@ public class Rock0Controller : Controller
     [HttpPost]
     public IActionResult Details(RockEntity rock)
     {
+
         if(!ModelState.IsValid)
         {
-            return View();
+            return View(rock);
         }
+
         _rockService.Update(rock);
+        return RedirectToAction(nameof(Details));
+    }
+
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+        _rockService.Delete(id);
         return RedirectToAction(nameof(Index));
     }
 }

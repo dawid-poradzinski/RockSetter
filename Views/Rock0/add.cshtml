@@ -16,52 +16,47 @@
                         <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
                     </svg>
                 </div>
-                <img src="~/rocks/@{@Model.ImageFileName}.jpeg" class="p-2 w-100" alt="@{@Model.Name}">
+                <img src="~/rocks/default.jpeg" class="p-2 w-100" alt="default">
             </div>
         </div>
     </div>
 
     <div class="container w-100 d-flex flex-column p-4 bg-dark border border-white rounded-3">
-        <h2 class="fs-1 border-bottom pb-2 text-white border-primary d-flex flex-row justify-content-between"><span>Details</span><span>#@Model.Id</span></h2>
+        <h2 class="fs-1 border-bottom pb-2 text-white border-primary d-flex flex-row justify-content-between"><span>Details</span><span>#New</span></h2>
         
-        <form method="post" class="p-4 d-flex flex-column gap-4" asp-controller="Rock0" asp-action="Details">
-            <input type="hidden" asp-for="Id" value="@Model.Id">
-            <input type="hidden" asp-for="Favorible" value="@Model.Favorible">
-            <input type="hidden" asp-for="ImageFileName" value="@Model.ImageFileName">
+        <form method="POST" class="p-4 d-flex flex-column gap-4" asp-controller="Rock0" asp-action="Add">
+            <input type="hidden" asp-for="Favorible">
+            <input type="hidden" asp-for="ImageFileName">
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Name" class="p-1"></label>
                 <span asp-validation-for="Name" class="text-danger"></span>
-                <input type="text" asp-for="Name" value="@Model.Name" class="w-50 rounded-3 p-1 bg-dark border border-secondary text-white">                
+                <input type="text" asp-for="Name" class="w-50 rounded-3 p-1 bg-dark border border-secondary text-white">                
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Formula" class="p-1"></label>
                 <span asp-validation-for="Formula" class="text-danger"></span>
-                <input type="text" asp-for="Formula" value="@Model.Formula" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="text" asp-for="Formula" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Hardness" class="p-1"></label>
                 <span asp-validation-for="Hardness" class="text-danger"></span>
-                <input type="number" asp-for="Hardness" value="@Model.Hardness" min="1" max="10" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" asp-for="Hardness" min="1" max="10" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Density" class="p-1"></label>
                 <span asp-validation-for="Density" class="text-danger"></span>
-                <input type="number" step="0.01" asp-for="Density" value="@Model.Density.ToString(System.Globalization.CultureInfo.InvariantCulture)" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" step="0.01" asp-for="Density" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Month" class="p-1"></label>
                 <span asp-validation-for="Month" class="text-danger"></span>
-                <input type="number" asp-for="Month" value="@Model.Month" min="1" max="12" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" asp-for="Month" min="1" max="12" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
             </div>
-            <div class="w-100 d-flex flex-row justify-content-between">
+            <div class="w-100 d-flex flex-row justify-content-center">
 
                 <button class="btn btn-primary" style="width: 45%;" type="submit">
-                    Save
+                    Add
                 </button>
-
-                <a class="btn btn-danger" style="width: 45%;" asp-controller="Rock0" asp-action="Delete" asp-route-id=@Model.Id>
-                    Delete
-                </a>
             </div>
         </form>
     </div>

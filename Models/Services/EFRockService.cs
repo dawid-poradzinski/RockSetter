@@ -19,9 +19,10 @@ public class EFRockSerivce : IRockService
         _context.SaveChanges();
     }
 
-    public void Delete(RockEntity rock)
+    public void Delete(int id)
     {
-        throw new NotImplementedException();
+        _context.Rocks.Remove( new RockEntity() {Id = id} );
+        _context.SaveChanges();
     }
 
     public List<RockEntity> GetAllRocks()

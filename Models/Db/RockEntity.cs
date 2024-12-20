@@ -1,4 +1,6 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 public class RockEntity
 {
@@ -20,6 +22,8 @@ public class RockEntity
     public int Month {get;set;}
 
     public bool Favorible {get;set;}
-
+    [Required]
+    [DefaultValue("default")]
     public string ImageFileName {get;set;}
+
 }

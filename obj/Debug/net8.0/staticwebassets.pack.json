@@ -249,12 +249,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\amethysd.jpeg",
-      "PackagePath": "staticwebassets\\rocks\\amethysd.jpeg"
+      "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\amethyst.jpeg",
+      "PackagePath": "staticwebassets\\rocks\\amethyst.jpeg"
     },
     {
       "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default.jpeg",
       "PackagePath": "staticwebassets\\rocks\\default.jpeg"
+    },
+    {
+      "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\default2.jpeg",
+      "PackagePath": "staticwebassets\\rocks\\default2.jpeg"
     },
     {
       "Id": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\emerald.jpeg",

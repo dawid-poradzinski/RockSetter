@@ -34,3 +34,9 @@ Made basic layout for Rock0/details.cshtml and added migrations
     19.12.24
 
 Tried to change from bootstrap to tailwind, but decided to stay. Added ImageFileName and loading image by it, and not by rock name. Added loading default image, if img file doesn't exist
+
+    20.12.24
+
+Made Add page, where we can add new rocks to our collection.
+Made working delete button for rock.
+Tried chaning update from post to put, but it's to much work something that's already working

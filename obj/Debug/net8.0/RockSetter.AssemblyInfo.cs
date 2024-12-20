@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RockSetter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+076aad9d3a377723b58aee5a9d11c443a33c5960")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+773d772565153d35ff0e15056622694dec2c729f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RockSetter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RockSetter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

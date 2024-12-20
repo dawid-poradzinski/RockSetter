@@ -5,15 +5,7 @@
 
     <h2>Your Rocks Collection</h2>
 
-    @if (Model.Count < 1)
-    {
-        <div class="bg-dark text-white p-3 mb-2">
-            You don't have any rocks sadly
-        </div>
-
-    }
-    else
-    {
+    @{
         List<RockBasicEntity> favorible = new();
 
         <div class="accordion">
@@ -21,20 +13,20 @@
                 <div class="accordion-item bg-dark border-secondary">
 
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed shadow-sm bg-primary text-white" type="button"
+                        <button class="accordion-button shadow-sm bg-primary text-white" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                             All Rocks
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div id="collapseTwo" class="accordion-collapse collapse show">
                         <div class="accordion-body">
 
 
                             <div class="container text-center">
-                                <div class="row row-cols-5">
+                                <div class="row row-cols-5 h-100">
 
                                     <div class="col p-3" id="addNew">
-                                        <a class="btn shadow btn-primary w-100 h-100 d-flex justify-content-center align-items-center"
+                                        <a class="btn shadow btn-primary w-100 h-100 d-flex justify-content-center align-items-center py-5"
                                             asp-controller="Rock0" asp-action="Add">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
                                                 fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
@@ -52,10 +44,10 @@
                                         }
 
                                         <div class="p-3 col">
-                                            <div class="rounded overflow-hidden position-relative hover-element shadow">
+                                            <div class="rounded-3 overflow-hidden position-relative hover-element shadow">
                                                 <a asp-controller="Rock0" asp-action="Details" asp-route-id=@rock.Id>
-                                                    <img class="w-100 rounded" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
-                                                    <div class="rounded  position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
+                                                    <img class="w-100 rounded-3" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
+                                                    <div class="rounded-3 position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
                                                         style="--bs-bg-opacity:0.5;">
                                                         <div>
                                                             @rock.Name
@@ -110,10 +102,10 @@
                                         {
 
                                             <div class="p-3 col">
-                                                <div class="rounded overflow-hidden position-relative hover-element shadow">
+                                                <div class="rounded-3 overflow-hidden position-relative hover-element shadow">
                                                     <a asp-controller="Rock0" asp-action="Details" asp-route-id=@rock.Id>         
-                                                       <img class="w-100 rounded" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
-                                                        <div class="rounded  position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
+                                                       <img class="w-100 rounded-3" src="~/rocks/@{@rock.ImageFileName}.jpeg" alt="rock" />
+                                                        <div class="rounded-3  position-absolute w-100 py-2 bg-dark text-white d-flex flex-column hover-place"
                                                             style="--bs-bg-opacity:0.5;">
                                                             <div>
                                                                 @rock.Name
