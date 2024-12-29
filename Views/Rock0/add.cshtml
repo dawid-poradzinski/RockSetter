@@ -1,56 +1,67 @@
 @model RockEntity
 
-<div class="d-flex flex-row h-100 w-100 gap-2 ">
+<div class="d-flex flex-lg-row flex-column h-100 w-100 gap-2 ">
 
     <div>
-        <div class="d-flex h-100 flex-column bg-dark border-white border p-1 position-relative justify-content-center rounded-3">
+        <div
+            class="d-flex h-100 flex-column bg-dark border-white border p-1 position-relative justify-content-center rounded-3">
             <div class="d-flex flex-colum position-relative">
-                <div class="position-absolute top-0 end-0 p-4" style="cursor: pointer;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                <div onclick="favoribleClick()"  class="position-absolute top-0 end-0 p-4" style="cursor: pointer;">
+                    <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="@((Model.Favorible) ? "red" : "currentColor")"
+                        class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                     </svg>
                 </div>
-                <div class="position-absolute top-0 start-0 p-4" style="cursor: pointer;" onclick="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"/>
-                        <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                <div class="position-absolute top-0 start-0 p-4" style="cursor: pointer;" onclick="openImageModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
                     </svg>
                 </div>
-                <img src="~/rocks/default.jpeg" class="p-2 w-100" alt="default">
+                <img src="~/rocks/@{@Model.ImageFileName}" id="image" class="p-2 w-100" alt="default">
             </div>
         </div>
     </div>
 
     <div class="container w-100 d-flex flex-column p-4 bg-dark border border-white rounded-3">
-        <h2 class="fs-1 border-bottom pb-2 text-white border-primary d-flex flex-row justify-content-between"><span>Details</span><span>#New</span></h2>
-        
+        <h2 class="fs-1 border-bottom pb-2 text-white border-primary d-flex flex-row justify-content-between">
+            <span>Details</span><span>#New</span></h2>
+
         <form method="POST" class="p-4 d-flex flex-column gap-4" asp-controller="Rock0" asp-action="Add">
-            <input type="hidden" asp-for="Favorible">
-            <input type="hidden" asp-for="ImageFileName">
+            <input type="hidden" asp-for="Favorible" id="favoribleInput">
+            <input type="hidden" asp-for="ImageFileName" id="imageFile" value="default.jpeg">
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Name" class="p-1"></label>
                 <span asp-validation-for="Name" class="text-danger"></span>
-                <input type="text" asp-for="Name" class="w-50 rounded-3 p-1 bg-dark border border-secondary text-white">                
+                <input type="text" asp-for="Name" placeholder="Quartz" class="w-50 rounded-3 p-1 bg-dark border border-secondary text-white">
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Formula" class="p-1"></label>
                 <span asp-validation-for="Formula" class="text-danger"></span>
-                <input type="text" asp-for="Formula" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="text" asp-for="Formula" placeholder="Si_O2"
+                    class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Hardness" class="p-1"></label>
                 <span asp-validation-for="Hardness" class="text-danger"></span>
-                <input type="number" asp-for="Hardness" min="1" max="10" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" asp-for="Hardness" min="1" max="10"
+                    class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Density" class="p-1"></label>
                 <span asp-validation-for="Density" class="text-danger"></span>
-                <input type="number" step="0.01" asp-for="Density" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" step="0.01" asp-for="Density"
+                    class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">
             </div>
             <div class="d-flex flex-row gap-2 justify-content-between fs-3 bg-primary rounded-3 p-2">
                 <label asp-for="Month" class="p-1"></label>
                 <span asp-validation-for="Month" class="text-danger"></span>
-                <input type="number" asp-for="Month" min="1" max="12" class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">                
+                <input type="number" asp-for="Month" min="1" max="12"
+                    class="w-50 p-1 rounded-3 bg-dark border border-secondary text-white">
             </div>
             <div class="w-100 d-flex flex-row justify-content-center">
 
@@ -60,4 +71,84 @@
             </div>
         </form>
     </div>
-</div>
+
+    @* Modalne okno dialogowe *@ 
+    <div id="imageModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Wybierz obraz</h5> 
+                    <button type="button" class="close" onclick="closeImageModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="uploadForm" asp-action="UploadImage" method="post" enctype="multipart/form-data"> 
+                        <input type="file" name="file" accept="image/*" /> 
+                        <button type="button" class="btn btn-primary" onclick="uploadImage()">Prześlij</button>
+                    </form>
+                    <div id="existingImages"> @* Obrazy zostaną załadowane dynamicznie *@ </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let loaded = false;
+
+    function openImageModal() {
+        $('#imageModal').modal('show');
+        if (!loaded) {
+            loadImages();
+            loaded = true;
+        }
+    }
+
+    function closeImageModal() {
+        $('#imageModal').modal('hide');
+    }
+
+    function loadImages() {
+        $.ajax({
+            url: '@Url.Action("GetImages", "Rock0")', 
+            type: 'GET',
+            success: function (data) {
+                $('#existingImages').html(data);
+            }
+        });
+    }
+
+    function selectImage(name) {
+        $('#imageFile').val(name);
+        $('#image').attr('src', "/rocks/" + name);
+        closeImageModal();
+    }
+
+    function favoribleClick() {
+        const heartIcon = $('#heart-icon');
+        const favoribleInput = $('#favoribleInput');
+        if (heartIcon.css('fill') === 'rgb(255, 0, 0)') {
+            heartIcon.css('fill', 'currentColor');
+            favoribleInput.val('false');
+        } else {
+            heartIcon.css('fill', 'red');
+            favoribleInput.val('true');
+        }
+    }
+
+    function uploadImage() {
+        var formData = new FormData($('#uploadForm')[0]);
+        $.ajax({
+            url: '@Url.Action("UploadImage", "Rock0")',
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                loaded = false;
+                selectImage(data.fileName);
+            },
+            error: function () {
+                alert("Error uploading image.");
+            }
+        });
+    }
+</script>

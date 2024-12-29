@@ -22,8 +22,6 @@ public class RockEntity
     public int Month {get;set;}
 
     public bool Favorible {get;set;}
-    [Required]
-    [DefaultValue("default")]
-    public string ImageFileName {get;set;}
+    public string ImageFileName {get;set;} = "default.jpeg";
 
 }
