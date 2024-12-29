@@ -43,7 +43,7 @@ Mój projekt strony internetowej, która pozwala użytkownikom na zarządzanie b
 
 1. Zbuduj projekt:
 `dotnet build`
-2. Uruchom migacje bazy danych:
+2. Uruchom migracje bazy danych:
 `dotnet ef database update`
 3. Uruchom aplikację:
 `dotnet run`
