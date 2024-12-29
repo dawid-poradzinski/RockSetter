@@ -5,7 +5,7 @@
 namespace RockSetter.Migrations
 {
     /// <inheritdoc />
-    public partial class changeDefaultValues : Migration
+    public partial class initialMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

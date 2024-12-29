@@ -54,8 +54,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9jazBcX0ltYWdlTGlzdFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[A:/programowanie/Studia/netnauka/RockSetter/Views/Rock1/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9jazFcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [A:/programowanie/Studia/netnauka/RockSetter/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/programowanie/Studia/netnauka/RockSetter/Views/Shared/_ImageModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JbWFnZU1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [A:/programowanie/Studia/netnauka/RockSetter/Views/Shared/_ValidationScriptsPartial.cshtml]

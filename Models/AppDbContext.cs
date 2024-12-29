@@ -6,9 +6,7 @@ public class AppDbContext : DbContext
     private string DbPath {get;set;}
     public AppDbContext()
     {
-        var folder = Environment.SpecialFolder.LocalApplicationData;
-        var path = Environment.GetFolderPath(folder);
-        DbPath = Path.Join(path, "rocks.db");
+        DbPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "rocks.db");
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,7 +26,7 @@ public class AppDbContext : DbContext
             Formula = "Si_02H20",
             Hardness = 4,
             Month = 4,
-            ImageFileName = "amethyst"
+            ImageFileName = "amethyst.jpeg"
           },
             new RockEntity()
           {
@@ -39,7 +37,7 @@ public class AppDbContext : DbContext
             Formula = "Si_02H20",
             Hardness = 4,
             Month = 4,
-            ImageFileName = "emerald"
+            ImageFileName = "emerald.jpeg"
           }
         );
     }

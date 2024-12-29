@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace RockSetter.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241219023345_AddedImageFileName")]
-    partial class AddedImageFileName
+    [Migration("20241229214808_initialMigrations")]
+    partial class initialMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,7 +60,7 @@ namespace RockSetter.Migrations
                             Favorible = false,
                             Formula = "Si_02H20",
                             Hardness = 4,
-                            ImageFileName = "amethyst",
+                            ImageFileName = "amethyst.jpeg",
                             Month = 4,
                             Name = "amethyst"
                         },
@@ -71,7 +71,7 @@ namespace RockSetter.Migrations
                             Favorible = true,
                             Formula = "Si_02H20",
                             Hardness = 4,
-                            ImageFileName = "emerald",
+                            ImageFileName = "emerald.jpeg",
                             Month = 4,
                             Name = "Emerald"
                         });

@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return RedirectToAction("index", "Rock0");
+        return View();
     }
 
     public IActionResult Privacy()

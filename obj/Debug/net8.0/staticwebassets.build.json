@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kVdlxcYhtI9ArvpxURbe6UQzDJQY5I7HllPyfDDELio=",
+  "Hash": "txWfrb7tw/kRSJnndhqvrwXlK0DmmhD0i0YT6YWGNRY=",
   "Source": "RockSetter",
   "BasePath": "_content/RockSetter",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\js\\imageModal.js",
+      "SourceId": "RockSetter",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\",
+      "BasePath": "_content/RockSetter",
+      "RelativePath": "js/imageModal.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\imageModal.js"
     },
     {
       "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\js\\site.js",
@@ -1212,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks.db",
+      "SourceId": "RockSetter",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\",
+      "BasePath": "_content/RockSetter",
+      "RelativePath": "rocks.db",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\rocks.db"
     },
     {
       "Identity": "A:\\programowanie\\Studia\\netnauka\\RockSetter\\wwwroot\\rocks\\amethyst.jpeg",

@@ -57,7 +57,7 @@ namespace RockSetter.Migrations
                             Favorible = false,
                             Formula = "Si_02H20",
                             Hardness = 4,
-                            ImageFileName = "amethyst",
+                            ImageFileName = "amethyst.jpeg",
                             Month = 4,
                             Name = "amethyst"
                         },
@@ -68,7 +68,7 @@ namespace RockSetter.Migrations
                             Favorible = true,
                             Formula = "Si_02H20",
                             Hardness = 4,
-                            ImageFileName = "emerald",
+                            ImageFileName = "emerald.jpeg",
                             Month = 4,
                             Name = "Emerald"
                         });

@@ -1,42 +1,61 @@
-    03.12.24
+# Rock Seeker
 
-Created db table in Models/Db/RockEntity
+Mój projekt strony internetowej, która pozwala użytkownikom na zarządzanie biblioteką swoich okazów kamieni.
 
-Added package Microsoft.EntityFrameworkCore.Sqlite to acces database
--- Created model AppDbContext
-    Create variable, where db is stored
-    Overrided two methods
-    Registered RockEntity via DbSet
-    Made two default entries to database
+## Funkcjonalność
+- Przeglądanie wszystkich oraz ulubionych kamieni
+- Dodawanie nowych kamieni
+- Wgrywanie nowych zdjęć
+- Edycja wcześniej dodanych kamieni
 
-Added AppDbContext to builder in Program.cs
+## Technologie
+- ASP.NET Core
+- Entity Framework Core
+- Bootstrap
+- jQuery
+- SQLite
 
-    05.12.24
+## Jak uruchomić
 
-Created interface IRockService that declare methods to be implemented by class EFRockService. This file will handle actual b usiness logic for database operations.
+### **Wymagania**
+- .NET SDK 8.0 lub nowszy
 
-Used AddScoped method to register IRockService  interface with its implementation EFRockService in the Program.cs file.
-Ths ensures that a new instance of EFrockService is created for each HTTP request and reused within the same request.
+### **Instalacja**
+1. Sklonuj repozytorium:
+    ```sh
+    git clone https://github.com/dawid-poradzinski/RockSetter.git
+    cd RockSetter
+    ```
 
-    10.12.24
+### **Konfiguracja bazy danych**
+1. Baza danych SQLite jest automatycznie tworzona w katalogu wwwroot przy pierwszym uruchomieniu aplikacji. Ścieżka do bazy danych jest ustawiona w pliku Models/AppDbContext.cs:
 
-Created RockBasicEntity class for basic rock informations (id,name,image,favorible) that are essential for showing all rocks on main page.
-Created RockMapper class to convert detailed database entities into RockBasicEntity objest. Implemented it in EFRockSerivce getAll()
+    ```csharp
+    ...
+    public AppDbContext()
+    {
+        DbPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "rocks.db");
+    }
+    ...
+    ```
 
-    11.12.24
+### Uruchomienie aplikacji
 
-Made basic layout for Rock0/index.cshtml using bootstrap
+1. Zbuduj projekt:
+`dotnet build`
+2. Uruchom migacje bazy danych:
+`dotnet ef database update`
+3. Uruchom aplikację:
+`dotnet run`
 
-    16.12.24
+### Aplikacja będzie dostępna pod adresem
+`https://localhost:5001`
 
-Made basic layout for Rock0/details.cshtml and added migrations
+### Połączenie z bazą danych
+Aplikacja używa Entity Framework Core do zarządzania bazą danych SQLite. Konfiguracja połączenia znajduje się w metodzie ``OnConfiguring`` klasy ``AppDbContext``.
 
-    19.12.24
+## Autor
+Projekt stworzony przez [Dawid Poradziński](https://github.com/dawid-poradzinski).
 
-Tried to change from bootstrap to tailwind, but decided to stay. Added ImageFileName and loading image by it, and not by rock name. Added loading default image, if img file doesn't exist
-
-    20.12.24
-
-Made Add page, where we can add new rocks to our collection.
-Made working delete button for rock.
-Tried chaning update from post to put, but it's to much work something that's already working
+## Przyszłość
+W przyszłości planowane jest uruchomienie podstrony v1, która będzie wykonana na Razor Pages.
